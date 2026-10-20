@@ -1,6 +1,6 @@
 # Local PDF RAG Chatbot (free local LLM)
 
-This project converts the original IBM watsonx.ai RAG demo into a local app using **Ollama + Llama 3.2 + Chroma + Gradio**. It does not call a paid hosted LLM API. The models run on your computer, so performance depends on your hardware and available RAM.
+This project is RAG demo into a local app using **Ollama + Llama 3.2 + Chroma + Gradio**. It does not call a paid hosted LLM API. The models run on your computer, so performance depends on your hardware and available RAM.
 
 ## 1. Install prerequisites
 
@@ -125,3 +125,12 @@ Try a smaller Ollama chat model, such as `qwen2.5:1.5b`, update `LLM_MODEL` in `
 
 ### Security note
 The app binds to `127.0.0.1` and disables Gradio public sharing, so it is intended for local learning/debugging. Do not enable public sharing for private PDFs.
+
+
+CharacterTextSplitter: Fixed separator se split karta hai.
+RecursiveCharacterTextSplitter: Pehle larger natural boundaries try karta hai, phir smaller separators use karta hai.
+TokenTextSplitter: Token count ke basis par split karta hai.
+MarkdownHeaderTextSplitter: Markdown headings ke basis par split karta hai.
+HTMLHeaderTextSplitter: HTML heading structure use karta hai.
+Sentence-based splitter: Sentence boundaries par split karta hai.
+SemanticChunker: Meaning aur semantic similarity ko consider karta hai.
